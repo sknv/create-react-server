@@ -2,7 +2,6 @@ import _ from 'lodash'
 import React from 'react'
 import { connect } from 'react-redux'
 
-// import htmlUtil from '../lib/utils/htmlUtil'
 import { fetchProfile } from '../actions/profileActions'
 
 const IndexPage = ({ profile }) => {

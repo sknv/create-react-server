@@ -14,6 +14,7 @@ const AppRouter = () => {
   return (
     <Switch>
       {renderRoutes()}
+
       <ProtectedRoute path="/admin" component={ProtectedApp} />
 
       <Route path="*" component={NotFoundPage} />
