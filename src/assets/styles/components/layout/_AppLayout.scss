@@ -1,0 +1,49 @@
+.app-sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: $sidebar-width;
+
+  background: $body-bg;
+  border-right: 1px solid $gray-300;
+  transform: translate3d(-100%, 0, 0);
+  z-index: 4;
+
+  transition: transform .2s ease-in-out;
+
+  @include media-breakpoint-up(md) {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.app-page {
+  @include media-breakpoint-up(md) {
+    padding-left: $sidebar-width;
+  }
+}
+
+.app-layout-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: $black;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 3;
+
+  transition: opacity 0.2s ease-in-out;
+}
+
+.app-layout.-sidebar-visible {
+  > .app-sidebar {
+    transform: translate3d(0, 0, 0);
+  }
+
+  > .app-layout-overlay {
+    pointer-events: auto;
+    opacity: .6;
+  }
+}

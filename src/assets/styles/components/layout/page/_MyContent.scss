@@ -1,0 +1,13 @@
+.app-page .content {
+  padding-top: $page-padding * .5;
+  padding-bottom: $page-padding * .5;
+
+  @include media-breakpoint-up(md) {
+    padding-top: $page-padding;
+    padding-bottom: $page-padding;
+  }
+}
+
+.content .action-group .btn:not(:first-child) {
+  margin-left: $spacer * .5;
+}

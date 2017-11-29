@@ -1,0 +1,29 @@
+.sidemenu {
+  display: flex;
+  flex-flow: column;
+  height: calc(100% - #{$header-height});
+
+  > .-sidemenu-grow {
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+
+  .nav .nav-link {
+    position: relative;
+  }
+
+  .nav .nav-link.active {
+    color: $link-hover-color;
+    font-weight: bold;
+  }
+
+  .nav.nested .nav-link {
+    padding-left: $spacer * 3;
+  }
+}
+
+.sidemenu-badge {
+  position: absolute;
+  top: .7rem;
+  right: $spacer;
+}
